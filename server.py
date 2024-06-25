@@ -8,13 +8,13 @@ import keyboard
 import xml.etree.ElementTree as ET
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-p", "--arg1", type=int, help="Port (default: 3304)", default=3304)                 # port
-parser.add_argument("-r", "--arg2", type=int, help="Receive buffer (default: 1024)", default=1024)       # recv
-parser.add_argument("-f", "--arg3", type=str, help="Database file", default="db.xml")                    # file
-parser.add_argument("-k", "--arg4", type=str, help="Password", default="PDB")                                           # key
-parser.add_argument("-l", "--arg5", type=str, help="Logging (true/false)", default="false")               # logging
-parser.add_argument("-s", "--arg6", type=str, help="Host (default: localhost)", default="localhost")     # host
-parser.add_argument("-c", "--arg7", type=int, help="Max clients (default: 100)", default=100)            # maxclients
+parser.add_argument("-p", "--arg1", type=int, help="Port (default: 3304)", default=3304)
+parser.add_argument("-r", "--arg2", type=int, help="Receive buffer (default: 1024)", default=1024)
+parser.add_argument("-f", "--arg3", type=str, help="Database file", default="db.xml")
+parser.add_argument("-k", "--arg4", type=str, help="Password", default="PDB")
+parser.add_argument("-l", "--arg5", type=str, help="Logging (true/false)", default="false")
+parser.add_argument("-s", "--arg6", type=str, help="Host (default: localhost)", default="localhost")
+parser.add_argument("-c", "--arg7", type=int, help="Max clients (default: 100)", default=100)
 args = parser.parse_args()
 
 started_time = f"{datetime.now().year}.{datetime.now().month}.{datetime.now().day} -- {datetime.now().hour}-{datetime.now().minute}-{datetime.now().second}"
@@ -202,30 +202,6 @@ while True:
         log(f"Wrong password from {Fore.CYAN}{ca[0]}:{ca[1]}{Fore.YELLOW}.")
         ret("<pdb.ERR_WRONG_PWD>")
         cs.close()
-
-
-#   0       1                   2       3       4       5       6
-#   pwd     CREATE_GROUP        name
-#   pwd     REMOVE_GROUP        name
-#   pwd     WRITE               group   name
-#   pwd     ERASE               group   name
-#   pwd     ITEM_COUNT          group
-#   pwd     GROUP_COUNT
-#   pwd     GROUPS
-#   pwd     ITEMS               group
-#   pwd     CHECK               group   name
-#   pwd     SETATTRIB           group   name    attr    value
-#   pwd     GETATTRIB           group   name    attr
-
-
-#   <pdb.ERR_GROUP_EXISTS>              group already exists with this name
-#   <pdb.ERR_ITEM_EXISTS>               item already exists with this name
-#   <pdb.ERR_GROUP_NOT_EXISTS>          group not exists
-#   <pdb.ERR_ITEM_NOT_EXISTS>           item not exists
-#   <pdb.ERR_ATTRIB_NOT_EXISTS>         attribute not exists
-
-#   <pdb.ERR_WRONG_REQUEST>             wrong request
-#   <pdb.ERR_SERVER_FULL>               server full
 #   <pdb.ERR_SERVER_SUSPENDED>          server suspended
 #   <pdb.SUCCESS>                       operation successfully
 #   <pdb.ERR_REQUEST_MISS>              request missed
