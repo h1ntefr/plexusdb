@@ -73,7 +73,7 @@ db.ping()
 
 ## Client Commands
 
-| Response        | Arguments              | Description                                | Returns				   |
+| Command         | Arguments              | Description                                | Returns				   |
 | --------------- | ---------------------- | ------------------------------------------ | ------------------------ |
 | CREATE_GROUP    | item                   | Creates group in database.                 | `None`
 | REMOVE_GROUP    | item                   | Removes group from database.               | `None`
