@@ -24,13 +24,15 @@ python server.py <arg> <value> ...
 ```
 
 Arguments:
-	- "-p <port>" (Port (default: 3304))
-	- "-r <recv>" (Receive buffer size (bytes) (default: 1024))
-	- "-f <file>" (Database file (.xml) (default: "db.xml"))
-	- "-k <pwd>" (Password (default: "PDB"))
-	- "-l <bool>" (Logging (true/false) (default: "false"))
-	- "-s <host>" (Host (default: "localhost"))
-	- "-c <max>" (Max clients (default: "100"))
+| Argument | Description                    | Default   |
+| -------- | ------------------------------ | --------- |
+| -p port  | Port                           | 3304      |
+| -r recv  | Receive buffer size (bytes)    | 1024      |
+| -f file  | Database file (.xml)           | db.xml    |
+| -k pwd   | Password                       | PDB       |
+| -l bool  | Logging (true/false)           | false     |
+| -s host  | Host                           | localhost |
+| -c max   | Max clients                    | 100       |
 
 ## Client
 
@@ -77,13 +79,13 @@ db.ping()
 | REMOVE_GROUP    | item                   | Removes group from database.               | `None`
 | WRITE           | group item             | Creates new item in group.                 | `None`
 | ERASE           | group item             | Removes item from group.                   | `None`
-| ITEM_COUNT      | group                  | Gets total count of items in group.        | `value `**:int**
-| GROUP_COUNT     |                        | Gets total count of groups in database.    | `value `**:int**
-| GROUPS		  |                        | Gets all groups from database.             | `value `**:str**
-| ITEMS           | group                  | Gets all items from group.                 | `value `**:str**
-| CHECK           | group item             | Checks presence of item in group.          | `True/False `**:bool**
+| ITEM_COUNT      | group                  | Gets total count of items in group.        | `value` **:int**
+| GROUP_COUNT     |                        | Gets total count of groups in database.    | `value` **:int**
+| GROUPS		  |                        | Gets all groups from database.             | `value` **:str**
+| ITEMS           | group                  | Gets all items from group.                 | `value` **:str**
+| CHECK           | group item             | Checks presence of item in group.          | `True/False` **:bool**
 | SETATTRIB       | group item attr value  | Set attribute value of item in group.      | `None`
-| GETATTRIB       | group item attr        | Get attribute value of item from group.    | `value `**:str**
+| GETATTRIB       | group item attr        | Get attribute value of item from group.    | `value` **:str**
 
 
 (C) 2024 h1ntefr
