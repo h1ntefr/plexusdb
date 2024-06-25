@@ -56,7 +56,8 @@ db.query( command:str )
 data = db.exquery( command:str )
 
 # Ping server, returns True if available, or False.
-db.ping()
+if db.ping():
+  print("Database alive.")
 ```
 
 
