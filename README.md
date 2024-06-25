@@ -53,7 +53,7 @@ Communication with server
 db.query( command:str )
 
 # Execute command on server, with returning value.
-db.exquery( command:str )
+data = db.exquery( command:str )
 
 # Ping server, returns True if available, or False.
 db.ping()
