@@ -74,19 +74,19 @@ if db.ping():
 
 ## Client Commands
 
-| Command         | Arguments              | Description                                | Returns				   |
-| --------------- | ---------------------- | ------------------------------------------ | ------------------------ |
-| CREATE_GROUP    | item                   | Creates group in database.                 | `None`
-| REMOVE_GROUP    | item                   | Removes group from database.               | `None`
-| WRITE           | group item             | Creates new item in group.                 | `None`
-| ERASE           | group item             | Removes item from group.                   | `None`
-| ITEM_COUNT      | group                  | Gets total count of items in group.        | `value` **:int**
-| GROUP_COUNT     |                        | Gets total count of groups in database.    | `value` **:int**
-| GROUPS		  |                        | Gets all groups from database.             | `value` **:str**
-| ITEMS           | group                  | Gets all items from group.                 | `value` **:str**
-| CHECK           | group item             | Checks presence of item in group.          | `True/False` **:bool**
-| SETATTRIB       | group item attr value  | Set attribute value of item in group.      | `None`
-| GETATTRIB       | group item attr        | Get attribute value of item from group.    | `value` **:str**
+| Command         | Arguments              | Description                                | Returns				                    |
+| --------------- | ---------------------- | ------------------------------------------ | --------------------------------- |
+| CREATE_GROUP    | item                   | Creates group in database.                 | `<pdb.SUCCESS>` if successfully   |
+| REMOVE_GROUP    | item                   | Removes group from database.               | `<pdb.SUCCESS>` if successfully   |
+| WRITE           | group item             | Creates new item in group.                 | `<pdb.SUCCESS>` if successfully   |
+| ERASE           | group item             | Removes item from group.                   | `<pdb.SUCCESS>` if successfully   |
+| ITEM_COUNT      | group                  | Gets total count of items in group.        | `value` **:int**                  |
+| GROUP_COUNT     |                        | Gets total count of groups in database.    | `value` **:int**                  |
+| GROUPS		      |                        | Gets all groups from database.             | `value` **:str**                  |
+| ITEMS           | group                  | Gets all items from group.                 | `value` **:str**                  |
+| CHECK           | group item             | Checks presence of item in group.          | `True/False` **:bool**            |
+| SETATTRIB       | group item attr value  | Set attribute value of item in group.      | `<pdb.SUCCESS>` if successfully   |
+| GETATTRIB       | group item attr        | Get attribute value of item from group.    | `value` **:str**                  |
 
 
 (C) 2024 h1ntefr
