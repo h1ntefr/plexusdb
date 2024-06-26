@@ -76,8 +76,8 @@ if db.ping():
 
 | Command         | Arguments              | Description                                | Returns				                    |
 | --------------- | ---------------------- | ------------------------------------------ | --------------------------------- |
-| CREATE_GROUP    | item                   | Creates group in database.                 | `<pdb.SUCCESS>` if successfully   |
-| REMOVE_GROUP    | item                   | Removes group from database.               | `<pdb.SUCCESS>` if successfully   |
+| CREATE_GROUP    | group                  | Creates group in database.                 | `<pdb.SUCCESS>` if successfully   |
+| REMOVE_GROUP    | group                  | Removes group from database.               | `<pdb.SUCCESS>` if successfully   |
 | WRITE           | group item             | Creates new item in group.                 | `<pdb.SUCCESS>` if successfully   |
 | ERASE           | group item             | Removes item from group.                   | `<pdb.SUCCESS>` if successfully   |
 | ITEM_COUNT      | group                  | Gets total count of items in group.        | `value` **:int**                  |
