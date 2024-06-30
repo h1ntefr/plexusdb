@@ -87,6 +87,8 @@ if db.ping():
 | CHECK           | group item             | Checks presence of item in group.          | `True/False` **:bool**            |
 | SETATTRIB       | group item attr value  | Set attribute value of item in group.      | `<pdb.SUCCESS>` if successfully   |
 | GETATTRIB       | group item attr        | Get attribute value of item from group.    | `value` **:str**                  |
+| INCREASE        | group item attr        | Increase value of item from group for 1.   | `value` **:int**                  |
+| DECREASE        | group item attr        | Decrease value of item from group for 1.   | `value` **:int**                  |
 
 
 (C) 2024 h1ntefr
